@@ -1,0 +1,29 @@
+input_dir: /SAN/vyplab/alb_projects/data/4su_all_i3/TESTING_PARSEBAM/
+bam_suffix: .Aligned.sorted.out.bam
+out_dir_parseBAM: /SAN/vyplab/alb_projects/data/4su_all_i3/LINKED_TESTING_PARSEBAM/output_matrix/
+out_dir_FindEdit: /SAN/vyplab/alb_projects/data/4su_all_i3/LINKED_TESTING_PARSEBAM/find_edit/
+log_dir: /SAN/vyplab/alb_projects/data/4su_all_i3/LINKED_TESTING_PARSEBAM/logs/
+code_dir: /SAN/vyplab/alb_projects/pipelines/Bullseye/Code/
+GENOME: /SAN/vyplab/vyplab_reference_genomes/sequence/human/gencode/GRCh38.primary_assembly.genome.fa
+refFlat: /SAN/vyplab/alb_projects/data/dartseq/refFlatNCBI.txt
+
+
+#####------------------------------
+## ParseBam
+#####------------------------------
+
+ParseBam_params:
+  minCoverage: 10
+  stranded: 
+#####------------------------------
+## Find_edit_site
+#####------------------------------
+
+FindEditSite_params:
+  minEdit: 5 
+  maxEdit: 95 
+  intron:
+  editFoldThreshold: 1.5 
+  EditedMinCoverage: 10 
+  ControlMinCoverage: 10 
+  MinEditSites: 2 
